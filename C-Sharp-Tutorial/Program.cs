@@ -7,6 +7,7 @@
         float productB = 11.99f;
         float productC = 5.75f;
 
+        //
         float summed = productA + productB + productC;
         float totalTax = (summed / 100) * vat;
 
