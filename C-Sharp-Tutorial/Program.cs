@@ -6,19 +6,13 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            WriteSomething();
-            WriteSomethingSpecific("I am an atgument and am called form a method");
+            Console.WriteLine(Add(1, 2));
             Console.Read();
         }
 
-        public static void WriteSomething()
+        public static int Add(int num1, int num2)
         {
-            Console.WriteLine("I am called from a method");
-        }
-
-        public static void WriteSomethingSpecific(string myText)
-        {
-            Console.WriteLine(myText);
+            return num1 + num2;
         }
     }
 }
