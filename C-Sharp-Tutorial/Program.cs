@@ -6,8 +6,33 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            IfStatement();
+            NestedIfStatement();
         }
+
+        // Nested if statement
+        public static void NestedIfStatement()
+        {
+            bool isAdmin = false;
+            bool isRegisterd = true;
+            string username = "";
+            Console.WriteLine("Please enter your usename");
+
+            username = Console.ReadLine();
+            if(isRegisterd && username != "" && username.Equals("admin"))
+            {
+                Console.WriteLine("Hi there, registerd user");
+                Console.WriteLine("Hi there," + username);
+                Console.WriteLine("Hi there, Admin");
+            }
+
+            if(isAdmin || isRegisterd)
+            {
+                Console.WriteLine("You are logged in");
+            }
+
+            Console.Read();
+        }
+
 
         // If statement
         public static void IfStatement()
