@@ -6,7 +6,43 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Operators();
+            IfStatement();
+        }
+
+        // If statement
+        public static void IfStatement()
+        {
+            Console.WriteLine("What's the temperature like?");
+            string temperature = Console.ReadLine();
+            int numTemp;
+            int number;
+            bool userEnterANumber = int.TryParse(temperature, out number);
+
+            if (userEnterANumber)
+            {
+                numTemp = number;
+            }
+            else
+            {
+                numTemp = 0;
+                Console.WriteLine("Value enterd was not number. 0 is as temperature");
+            }
+
+            if(numTemp < 10)
+            {
+                Console.WriteLine("Take the coat");
+            }else if (numTemp == 20)
+            {
+                Console.WriteLine("Pants and pull over should be fine");
+            }else if(numTemp > 30)
+            {
+                Console.WriteLine("It's super hot");
+            }else
+            {
+                Console.WriteLine("Shorts are enough today");
+            }
+
+            Console.Read();
         }
 
         // Operators
@@ -71,9 +107,7 @@ namespace HelloWorld
             isLowerAndSunny = isLower || isSunny;
             Console.WriteLine("result of isLower || isSunny is {0}", isLowerAndSunny);
 
-
-
-            Console.ReadKey();
+            Console.Read();
         }
 
 
