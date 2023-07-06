@@ -18,11 +18,11 @@ namespace HelloWorld
         //Properties
         public static void Properties()
         {
-            Box box = new Box();
-            box.SetLength(2);
-            box.height = 4;
-            box.width = 5;
-            Console.WriteLine("Box volume is " + box.GetVolume());
+            Box box = new Box(3,4,5);
+            Console.WriteLine("Box width is " + box.Width);
+            box.Width = 10;
+            Console.WriteLine("Box width is " + box.Width);
+            Console.WriteLine("Box volume is " + box.Volume);
             box.DisplayInfo();
 
             Console.ReadKey();
