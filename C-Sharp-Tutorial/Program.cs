@@ -6,7 +6,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            WhileLoop();
+            BreakAndContinue();
         }
 
         // Loop
@@ -49,6 +49,24 @@ namespace HelloWorld
                 Console.WriteLine("Current people count is {0}", counter);
             }
             Console.WriteLine("{0} people are inside the bus. Press enter to close the program");
+            Console.Read();
+        }
+
+        // -> Break & continue
+        public static void BreakAndContinue()
+        {
+            for(int counter = 0; counter < 10; counter++)
+            {
+                Console.WriteLine(counter);
+                if(counter == 8)
+                {
+                    Console.WriteLine("At 8 we stop!");
+                    break;
+                }else if(counter % 2 == 0)
+                {
+                    Console.WriteLine("Now comes an odd number!");
+                }
+            }
             Console.Read();
         }
 
