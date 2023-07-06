@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassesBasics;
+using Properties;
 
 namespace HelloWorld
 {
@@ -11,7 +12,20 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            ClassBasics();
+            Properties();
+        }
+
+        //Properties
+        public static void Properties()
+        {
+            Box box = new Box();
+            box.SetLength(2);
+            box.height = 4;
+            box.width = 5;
+            Console.WriteLine("Box volume is " + box.GetVolume());
+            box.DisplayInfo();
+
+            Console.ReadKey();
         }
 
         // Class
