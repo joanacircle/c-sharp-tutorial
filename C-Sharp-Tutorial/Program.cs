@@ -17,11 +17,14 @@ namespace HelloWorld
         // Class
         public static void ClassBasics()
         {
-            Human joana = new Human("Joana", "Chang", "brown", 7);
+            Human joana = new Human("Joana", "Chang", "pink", 7);
             joana.IntroduceMyself();
 
-            Human kevin = new Human("Kevin", "La", "brown", 1);
+            Human kevin = new Human("Kevin", "La", "green", 1);
             kevin.IntroduceMyself();
+
+            Human basicHuman = new Human();
+            basicHuman.IntroduceMyself();
 
             Console.ReadKey();
         }
