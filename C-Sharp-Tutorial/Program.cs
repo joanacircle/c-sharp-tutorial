@@ -6,7 +6,50 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            IfStatementShortcut();
+            WhileLoop();
+        }
+
+        // Loop
+        public static void ForLoop()
+        {
+            for (int i = 1; i < 20; i += 2)
+            {
+                Console.WriteLine(i);
+            }
+            Console.Read();
+        }
+
+        public static void DoWhileLoop()
+        {
+            int lengthOfText = 0;
+            string wholeText = "";
+            do
+            {
+                Console.WriteLine("Please enter the name of a friend");
+                string nameOfAFriend = Console.ReadLine();
+                int currentLength = nameOfAFriend.Length;
+                lengthOfText += currentLength;
+                wholeText += nameOfAFriend;
+            } while (lengthOfText < 20);
+            Console.WriteLine("Thanks, that was enough!" + wholeText);
+            Console.Read();
+        }
+
+        public static void WhileLoop()
+        {
+            int counter = 0;
+            string enterdText = "";
+            while(enterdText.Equals(""))
+            {
+                Console.WriteLine("Please press enter to increase by one and anything else" +
+                    "+ enter if you want to finish counting");
+                enterdText = Console.ReadLine();
+
+                counter++;
+                Console.WriteLine("Current people count is {0}", counter);
+            }
+            Console.WriteLine("{0} people are inside the bus. Press enter to close the program");
+            Console.Read();
         }
 
         // If statement: shortcut
