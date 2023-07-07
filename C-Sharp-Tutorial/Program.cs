@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,50 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            JaggedArray();
+            ArrayList();
+        }
+
+        // Array list
+        public static void ArrayList()
+        {
+            // declaring an ArrayList with undefined amount iof object
+            ArrayList myArrayList = new ArrayList();
+            // declaring an ArrayList with defined amount iof object
+            ArrayList myArrayList2 = new ArrayList(100);
+
+            myArrayList.Add(25);
+            myArrayList.Add("hello");
+            myArrayList.Add(13.37);
+            myArrayList.Add(13);
+            myArrayList.Add(128);
+            myArrayList.Add(25.3);
+            myArrayList.Add(13);
+
+            // delete elemnt with specific value from the arraylist
+            myArrayList.Remove(13);
+
+            // delete elemnt at specific position
+            myArrayList.RemoveAt(0);
+
+            Console.WriteLine(myArrayList.Count);
+
+            double sum = 0;
+            foreach (object obj in myArrayList)
+            {
+                if(obj is int)
+                {
+                    sum += Convert.ToDouble(obj);
+                }else if(obj is double)
+                {
+                    sum += (double)obj;
+                }else if(obj is string)
+                {
+                    Console.WriteLine(obj);
+                }
+            }
+
+            Console.WriteLine(sum);
+            Console.ReadKey();
         }
 
         // Jagged array
