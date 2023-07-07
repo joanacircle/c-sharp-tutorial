@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassesBasics;
 using Properties;
+using MembersC;
 
 namespace HelloWorld
 {
@@ -12,7 +13,15 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Properties();
+            Members();
+        }
+
+        // Members
+        public static void Members()
+        {
+            Members member1 = new Members();
+            member1.Introducing(true);
+            Console.ReadKey();
         }
 
         //Properties
