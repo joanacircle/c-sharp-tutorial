@@ -13,7 +13,41 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            ForeachLoop();
+            MultidimensionalArray();
+        }
+
+        // 2D Array (multidimensional array)
+        public static void MultidimensionalArray()
+        {
+            // declare 2D Array
+            string[,] matrix;
+            int[,] array2D2 = { { 1, 2 }, { 3, 4 } };
+
+            // 3D Array
+            int[,,] threeD;
+
+            // two dimensional array
+            int[,] array2D = new int[,]
+            {
+                {1,2,3}, // row 0
+                {4,5,6}, // row 1
+                {7,8,9}  // row 2
+            };
+            Console.WriteLine("Central value is {0}", array2D[1,1]);
+
+            string[,] array2DString = new string[3, 2]
+            {
+                {"one", "two"},
+                {"three", "four"},
+                {"five", "six"}
+            };
+            array2DString[1, 1] = "seven";
+            Console.WriteLine("array2DString[1, 1] value is {0}", array2DString[1, 1]);
+
+            int dimensions = array2DString.Rank;
+            Console.WriteLine("dimensions of array2DString is {0}", dimensions);
+
+            Console.ReadKey();
         }
 
         // Foreach Loop
@@ -32,7 +66,7 @@ namespace HelloWorld
             }
 
             Console.WriteLine("---");
-
+           
             int counter = 0;
             foreach(int k in nums)
             {
