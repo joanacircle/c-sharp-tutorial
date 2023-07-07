@@ -13,7 +13,36 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            MultidimensionalArray();
+            NestedForLoop();
+        }
+
+        // Nested for loop
+        static int[,] matrix =
+        {
+            { 1,2,3 },
+            { 4,5,6 },
+            { 7,8,9 }
+        };
+        public static void NestedForLoop()
+        {
+            foreach (int item in matrix)
+            {
+                //item = 0; -> does not affect the original array
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("This i out 2D array printed using nested for loop");
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                // inner for loop
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = 0;
+                    Console.WriteLine(matrix[i,j]);
+                }
+            }
+
+            Console.Read();
         }
 
         // 2D Array (multidimensional array)
